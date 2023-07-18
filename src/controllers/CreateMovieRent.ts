@@ -4,7 +4,7 @@ import prismaClient from "../database/prismaClient";
 export async function CreateMovieRent(req: Request, res: Response) {
   
   const { movieId, userId } = req.body;
-
+  
   const movieRent = await prismaClient.movieRent.create({
     data: {
       movieId, 
